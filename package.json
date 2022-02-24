@@ -2,8 +2,8 @@
   "repository": "#",
   "license": "UNLICENSED",
   "engines" : {
-    "npm" : ">=7.0.0",
-    "node" : ">=16.0.0"
+    "npm" : "8.x",
+    "node" : "16.x"
   },
 
   "scripts": {
