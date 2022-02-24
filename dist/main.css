@@ -22,7 +22,7 @@ body
 .info {
     position: fixed;
     top: 15%;
-    left: 10%;
+    left: 5%;
     opacity: 1;
     animation-name: fadeInOpacity;
     animation-iteration-count: 1;

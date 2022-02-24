@@ -13,16 +13,18 @@ body
 
 .webgl
 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 40%;*/
+    /*outline: none;*/
 }
 
 .info {
-    position: fixed;
-    top: 15%;
-    left: 10%;
+    display: inline-block;
+    width: 40%;
+    /*position: fixed;*/
+    /*top: 15%;*/
+    /*left: 5%;*/
     opacity: 1;
     animation-name: fadeInOpacity;
     animation-iteration-count: 1;
