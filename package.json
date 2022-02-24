@@ -8,7 +8,7 @@
 
   "scripts": {
     "start": "node server.js",
-    "build": "webpack --config ./bundler/webpack.prod.js",
+    "build": "webpack --config ./bundler/webpack.prod.js --stats verbose",
     "dev": "webpack serve --config ./bundler/webpack.dev.js"
   },
   "dependencies": {
