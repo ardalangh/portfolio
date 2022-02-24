@@ -1,6 +1,11 @@
 {
   "repository": "#",
   "license": "UNLICENSED",
+  "engines" : {
+    "npm" : ">=7.0.0",
+    "node" : ">=16.0.0"
+  },
+
   "scripts": {
     "start": "node server.js",
     "build": "webpack --config ./bundler/webpack.prod.js",
