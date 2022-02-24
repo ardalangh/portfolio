@@ -1,16 +1,11 @@
 import './style.css'
+
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import * as dat from 'dat.gui'
 import gsap from 'gsap';
 
 //Texture Loader
 const textureLoader = new THREE.TextureLoader()
 
-
-
-// Debug
-const gui = new dat.GUI()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -68,8 +63,8 @@ const sizes = {
 window.addEventListener('resize', () =>
 {
 	// Update sizes
-	sizes.width = window.innerWidth
-	sizes.height = window.innerHeight
+	// sizes.width = window.innerWidth
+	// sizes.height = window.innerHeight
 
 	// Update camera
 	camera.aspect = sizes.width / sizes.height
