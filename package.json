@@ -7,8 +7,8 @@
   },
 
   "scripts": {
-    "start": "node server.js",
-    "build": "webpack --display-error-details --config ./bundler/webpack.prod.js",
+//    "start": "node server.js",
+    "build": "webpack --config ./bundler/webpack.prod.js",
     "dev": "webpack serve --config ./bundler/webpack.dev.js"
   },
   "dependencies": {
