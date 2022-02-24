@@ -137,9 +137,10 @@ function onClick(event) {
 			case "bookList":
 				window.open("https://github.com/ardalangh/bookList")
 				break;
-			case y:
-				// code block
+			case "DunGen":
+				window.open("https://github.com/ardalangh/DunGen")
 				break;
+
 			default:
 			// code block
 		}
