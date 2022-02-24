@@ -2,6 +2,9 @@ import './style.css'
 import * as THREE from 'three'
 import gsap from 'gsap';
 
+
+
+
 //Texture Loader
 const textureLoader = new THREE.TextureLoader()
 
@@ -79,6 +82,10 @@ window.addEventListener('resize', () =>
 
 
 
+window.addEventListener('load', (event) => {
+	window.confirm("Scroll to see other projects. Click on the project to be redirected to the repo page.");
+});
+
 
 
 
@@ -136,12 +143,17 @@ function onClick(event) {
 			case "bookList":
 				window.open("https://github.com/ardalangh/bookList")
 				break;
-			case "DunGen":
+			case "dunGen":
 				window.open("https://github.com/ardalangh/DunGen")
 				break;
-
+			case "scheme":
+				window.open("https://github.com/ardalangh/schemeInterpreter")
+				break;
+			case "e2ee":
+				window.open("https://github.com/ardalangh/e2eeBackend")
+				break;
 			default:
-			// code block
+
 		}
 	}
 }
@@ -185,6 +197,7 @@ const tick = () =>
 
 		camera.position.y = 0
 	}
+
 
 	if (camera.position.y > 2.4 * 4) {
 		camera.position.y = 2.4 * 4
