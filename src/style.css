@@ -7,24 +7,23 @@
 html,
 body
 {
-    height: 100vh;
-    font-family: 'Poppins';
+    margin: 0; height: 100%; overflow: hidden
 }
 
 .webgl
 {
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*left: 40%;*/
-    /*outline: none;*/
+}
+
+
+.container {
+    background-color: black;
+    display: flex;
 }
 
 .info {
     display: inline-block;
     width: 40%;
-    /*position: fixed;*/
-    /*top: 15%;*/
-    /*left: 5%;*/
+    padding: 10% 0% 10% 5%;
     opacity: 1;
     animation-name: fadeInOpacity;
     animation-iteration-count: 1;
