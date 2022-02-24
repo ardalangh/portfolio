@@ -23,6 +23,7 @@
     "style-loader": "^2.0.0",
     "three": "^0.138.0",
     "three-plain-animator": "^1.0.6",
+    "three.interaction": "^0.2.3",
     "webpack": "^5.24.2",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2",

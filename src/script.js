@@ -24,8 +24,9 @@ for (let i = 0; i < 4; i++) {
 	})
 
 	const billboard = new THREE.Mesh(billboardGeom, material);
-	billboard.position.set(1, i * 2.6, 0)
 
+	billboard.position.set(1, i * 2.6, 0)
+	billboard.name = projNames[i]
 	objs.push(billboard)
 	scene.add(billboard)
 }
@@ -118,12 +119,31 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 /*Mouse*/
 
 window.addEventListener('wheel', onMouseWheel)
+window.addEventListener('click', onClick)
+
 
 let y = 0
 let position = 0
+let intersects = []
 
 function onMouseWheel(event) {
 	y = event.deltaY * 0.0003;
+}
+
+
+function onClick(event) {
+	if (intersects.length > 0) {
+		switch(intersects[0].object.name) {
+			case "bookList":
+				window.open("https://github.com/ardalangh/bookList")
+				break;
+			case y:
+				// code block
+				break;
+			default:
+			// code block
+		}
+	}
 }
 
 
@@ -162,7 +182,7 @@ const tick = () =>
 
 
 	if (camera.position.y < 0) {
-		console.log("sdjfglj");
+
 		camera.position.y = 0
 	}
 
@@ -174,7 +194,7 @@ const tick = () =>
 
 
 	raycaster.setFromCamera(mouse, camera)
-	const intersects = raycaster.intersectObjects(objs)
+	intersects = raycaster.intersectObjects(objs)
 
 
 	for (const intersect of intersects) {
