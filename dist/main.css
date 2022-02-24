@@ -1,0 +1,81 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    height: 100vh;
+    font-family: 'Poppins';
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.info {
+    position: fixed;
+    top: 15%;
+    left: 10%;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+
+
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+#hi {
+    color: #D3A005;
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 3%;
+}
+
+
+#name {
+    color: #CCD7F5;
+    font-family: 'Space Mono', monospace;
+    font-weight: bolder;
+    font-size: xxx-large;
+    margin-bottom: 3%;
+}
+
+
+#moreAboutMe{
+    color: #8893AF;
+    font-family: 'Space Mono', monospace;
+    font-weight: bolder;
+    font-size: large;
+    margin-bottom: 3%;
+
+}
+
+#moreAboutMe a {
+    color: #D3A005;
+}
+
+
+i {
+    margin-right: 1%;
+    color: #D3A005;
+    font-size: 48px;
+}
+
+/*# sourceMappingURL=main.css.map*/
