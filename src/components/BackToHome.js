@@ -9,7 +9,7 @@ function BackToHome(props) {
 	const navigate = useNavigate();
 	return (
 			<IconButton
-				onClick={() => navigate(`/home`)}
+				onClick={() => navigate(`/`)}
 				sx={{
 					display: 'flex',
 					position: 'absolute',
