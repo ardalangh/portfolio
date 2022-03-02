@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
+
+
+#root {
+
+  padding: 0%;
+  margin: 0%;
+
+}
+
+#homeVideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+#homeMap {
+  width: 30vw;
+  height: 30vh;
+
+}
+
+.mapDiv {
+  position: fixed;
+  top: 15vh;
+  left: 33vw;
+}
+
+
+.mapDiv h1 {
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-size: 2vw;
+  font-family: 'Playfair Display SC', serif;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 4px;
+}
+
+
