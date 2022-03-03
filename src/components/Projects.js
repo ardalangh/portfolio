@@ -8,7 +8,6 @@ function Projects(props) {
 	useEffect(() => {
 
 
-		GLTFLoader
 
 		const sizes = {
 			width: window.innerWidth,
