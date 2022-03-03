@@ -1,13 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import * as THREE from 'three';
-import {RoundedBoxGeometry} from 'three/examples/jsm/geometries/RoundedBoxGeometry';
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import {IconButton} from '@mui/material';
-import DeviceOrientation, {Orientation} from 'react-screen-orientation';
-import {isBrowser, isMobile} from 'react-device-detect';
+import { DRACOLoader } from './jsm/loaders/DRACOLoader.js';
 
 
 function Projects(props) {
@@ -82,7 +75,9 @@ function Projects(props) {
 		const buttonTextureHovered = new THREE.MeshBasicMaterial({color: 0xC0BFC0});
 		let screen, bar, leftButton, rightButton;
 
-		const loader = new GLTFLoader();
+
+		const loader = new DRACOLoader();
+
 		loader.load(
 			// resource URL
 			'./macbook/scene.gltf',
