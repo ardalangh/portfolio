@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import * as THREE from 'three';
-import { DRACOLoader } from './jsm/loaders/DRACOLoader.js';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 
 
 function Projects(props) {
@@ -8,7 +8,7 @@ function Projects(props) {
 	useEffect(() => {
 
 
-
+		GLTFLoader
 
 		const sizes = {
 			width: window.innerWidth,
