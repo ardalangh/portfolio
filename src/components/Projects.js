@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import * as THREE from 'three';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
 
 
 function Projects(props) {
@@ -75,7 +76,7 @@ function Projects(props) {
 		let screen, bar, leftButton, rightButton;
 
 
-		const loader = new DRACOLoader();
+		const loader = new GLTFLoader();
 
 		loader.load(
 			// resource URL
