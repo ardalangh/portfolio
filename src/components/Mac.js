@@ -63,19 +63,19 @@ export default function Mac(props) {
 	const projAssets = [
 		{
 			'mainScreen': useLoader(TextureLoader, `assets/monitorAssets/bookList.png`),
-			'touchBar': useLoader(TextureLoader, `assets/touchBarAssets/bookListTouchBar.png`),
+			'touchBar': useLoader(TextureLoader, `assets/touchbarAssets/bookListTouchBar.png`),
 		},
 		{
 			'mainScreen': useLoader(TextureLoader, `assets/monitorAssets/e2ee.png`),
-			'touchBar': useLoader(TextureLoader, `assets/touchBarAssets/e2eeTouchBar.png`),
+			'touchBar': useLoader(TextureLoader, `assets/touchbarAssets/e2eeTouchBar.png`),
 		},
 		{
 			'mainScreen': useLoader(TextureLoader, `assets/monitorAssets/dunGen.png`),
-			'touchBar': useLoader(TextureLoader, `assets/touchBarAssets/dunGenTouchBar.png`),
+			'touchBar': useLoader(TextureLoader, `assets/touchbarAssets/dunGenTouchBar.png`),
 		},
 		{
 			'mainScreen': useLoader(TextureLoader, `assets/monitorAssets/actionMap.png`),
-			'touchBar': useLoader(TextureLoader, `assets/touchBarAssets/actionMapTouchBar.png`),
+			'touchBar': useLoader(TextureLoader, `assets/touchbarAssets/actionMapTouchBar.png`),
 		},
 	];
 
