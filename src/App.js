@@ -65,16 +65,16 @@ function App() {
 
 		<ThemeProvider theme={theme}>
 			<Bar/>
-			{/*<Box*/}
-			{/*	sx={{*/}
-			{/*		textAlign: 'center',*/}
-			{/*	}}*/}
-			{/*>*/}
-			{/*	{!loaded ? <CircularProgress sx={{*/}
-			{/*		backgroundColor: 'none',*/}
-			{/*		color: 'white',*/}
-			{/*	}}/> : null}*/}
-			{/*</Box>*/}
+			<Box
+				sx={{
+					textAlign: 'center',
+				}}
+			>
+				{!loaded ? <CircularProgress sx={{
+					backgroundColor: 'none',
+					color: 'white',
+				}}/> : null}
+			</Box>
 			<Box
 				sx={{
 					display: 'flex',
