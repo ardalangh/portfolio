@@ -35,7 +35,6 @@ const Bar = () => {
 						<Button
 							variant="outlined"
 							key={'HOME'}
-							onClick={handleCloseNavMenu}
 							sx={{
 								borderColor: Colors.lightBg,
 								my: 2,
@@ -51,7 +50,6 @@ const Bar = () => {
 						<Button
 							variant="outlined"
 							key={'PROJECTS'}
-							onClick={handleCloseNavMenu}
 							sx={{
 								borderColor: Colors.lightBg,
 								my: 2,
@@ -67,7 +65,6 @@ const Bar = () => {
 						<Button
 							variant="outlined"
 							key={'SKILLS'}
-							onClick={handleCloseNavMenu}
 							sx={{
 								borderColor: Colors.lightBg,
 								my: 2,
