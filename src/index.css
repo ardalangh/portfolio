@@ -1,12 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Italiana&family=Krona+One&family=Ubuntu&family=Viaoda+Libre&display=swap');
-
-
 html, body {margin: 0; height: 100%; overflow: hidden}
 
-
 body {
+  background-color: #141B1F;
   margin: 0;
-  background-color: black;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -19,20 +15,3 @@ code {
     monospace;
 }
 
-
-a {
-  color: #D3A005;
-}
-
-
-@media (orientation: portrait) {
-  #projCanvasForMobiles { display: none; }
-  #mainPageForMobiles { display: none; }
-  #rotateMsg { display: block; }
-}
-
-@media (orientation: landscape) {
-  #projCanvasForMobiles { display: block; }
-  #mainPageForMobiles { display: block; }
-  #rotateMsg { display: none; }
-}
