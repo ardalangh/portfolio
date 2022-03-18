@@ -6,17 +6,14 @@ import {useSelector} from 'react-redux';
 
 
 function Info(props) {
-	const bar = document.getElementById("bar")
-	const three = document.getElementById("threeCanvas")
 	const loaded = useSelector((state) => state.loaded.value);
 
 	return (
 		<Box
-
 			sx={{
-				display: loaded? 'flex': 'none',
+				display: loaded ? 'flex' : 'none',
 				position: 'absolute',
-				top: '63%' ,
+				top: '63%',
 				left: '50%',
 				width: '30vw',
 				height: '60vh',
@@ -30,12 +27,12 @@ function Info(props) {
 			<Box
 				sx={{
 					display: 'flex',
-					justifyContent: 'center'
+					justifyContent: 'center',
 				}}
 			>
 				<img src="meMoji.png"
-				     width={window.innerWidth <800? '45px': '30%'}
-				     height={window.innerHeight <400? '45px': '100%'}/>
+				     width={window.innerWidth < 800 ? '45px' : '30%'}
+				     height={window.innerHeight < 400 ? '45px' : '100%'}/>
 				<Box
 					sx={{
 						display: 'flex',
@@ -55,14 +52,12 @@ function Info(props) {
 					</Typography>
 				</Box>
 			</Box>
-
-			<Typography variant="h6" sx={{marginTop: '5%', color: Colors.lightTextColor,}}>
+			<Typography variant="h6" sx={{marginTop: '5%', color: Colors.lightTextColor}}>
 				I am a back-end engineer specialized in test-driven secure servers to power different services.
 				Currently I am focusing on building servers using
-				<a href={"https://www.rust-lang.org/"}> Rust </a>
+				<a href={'https://www.rust-lang.org/'}> Rust </a>
 				to build reliable and efficient products.
 			</Typography>
-
 			<Links/>
 		</Box>
 	);

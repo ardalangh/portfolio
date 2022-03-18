@@ -1,13 +1,11 @@
 import React, {useEffect, useRef, useState} from 'react';
 
-import * as THREE from 'three';
-
-import {useFrame, useLoader} from '@react-three/fiber';
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
-import {useSpring, animated, config} from '@react-spring/three';
-import {macOrientationReducer} from '../redux/macOrientationSlice';
-import {useDispatch, useSelector} from 'react-redux';
 import {TextureLoader} from 'three';
+
+import {useLoader} from '@react-three/fiber';
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
+import {animated, config, useSpring} from '@react-spring/three';
+import {useDispatch, useSelector} from 'react-redux';
 import SkillsThree from './SkillsThree';
 import {setToLoaded} from '../redux/loadedSlice';
 
