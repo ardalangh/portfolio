@@ -11,7 +11,7 @@ export const projIndexSlice = createSlice({
 			state.value = ((state.value + 1) % 4)
 		},
 		decrement: state => {
-			state.value = (((state.value - 1) % 8) % 4);
+			state.value = ((state.value - 1 % 4) + 4) % 4;
 		},
 
 	}

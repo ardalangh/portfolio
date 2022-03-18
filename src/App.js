@@ -61,37 +61,36 @@ function App() {
 		},
 	};
 
-	console.log(loaded);
 	return (
 
 		<ThemeProvider theme={theme}>
 			<Bar/>
-
-
-			<Box
-			sx={{
-				textAlign: "center"
-			}}
-			>
-				{!loaded? <CircularProgress sx={{
-					backgroundColor: "none",
-					color: 'white'
-				}}/>: null}
-			</Box>
-
+			{/*<Box*/}
+			{/*	sx={{*/}
+			{/*		textAlign: 'center',*/}
+			{/*	}}*/}
+			{/*>*/}
+			{/*	{!loaded ? <CircularProgress sx={{*/}
+			{/*		backgroundColor: 'none',*/}
+			{/*		color: 'white',*/}
+			{/*	}}/> : null}*/}
+			{/*</Box>*/}
 			<Box
 				sx={{
+					display: 'flex',
 					height: '100vh',
 				}}
 			>
 				{macOrientationNumber == 1 ? <IconButton id={'leftArrow'} sx={{
 					backgroundColor: Colors.darkBg,
 					color: Colors.lightBg,
+				}} onClick={() => {
+					dispatch(decrement())
 				}}
-				                                         onClick={() => dispatch(decrement())}
 				>
 					<KeyboardArrowLeftIcon/>
 				</IconButton> : null}
+
 				<ReactReduxContext.Consumer>
 					{({store}) => (
 						<Canvas
@@ -108,6 +107,7 @@ function App() {
 							</Provider>
 						</Canvas>)}
 				</ReactReduxContext.Consumer>
+
 				{macOrientationNumber == 1 ?
 					<IconButton id={'rightArrow'}
 					            sx={{
