@@ -17,7 +17,7 @@ export default function Mac(props) {
 	const projectIndex = useSelector((state) => state.projectIndex.value);
 	const dispatch = useDispatch();
 
-	const gltf = useLoader(GLTFLoader, './macbook/scene.gltf');
+	const gltf = useLoader(GLTFLoader, './macbook/scene.glb');
 
 	useEffect(() => {
 		if (gltf) {

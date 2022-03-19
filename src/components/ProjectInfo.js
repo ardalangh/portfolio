@@ -75,7 +75,9 @@ function ProjectInfo(props) {
 						onClick={() => dispatch(increment())}
 						variant="outlined" startIcon={<NavigateBeforeIcon/>}> Next Project </Button>
 
-					<Button variant="outlined" startIcon={<GitHubIcon/>}> Project Repo </Button>
+					<Button
+						onClick={() => window.location.href = project.repoLink}
+						variant="outlined" startIcon={<GitHubIcon/>}> Project Repo </Button>
 					
 					<Button
 						onClick={() => dispatch(decrement())}
