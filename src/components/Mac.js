@@ -34,17 +34,20 @@ export default function Mac(props) {
 			if (window.innerWidth < 900) {
 				springArg.position = [0, 0.2, 1.0];
 			} else {
-				springArg.position = [0, 0, 1.1];
+				springArg.position = [0, 0, -10];
 			}
-			springArg.rotation = [0, Math.PI / 2, -Math.PI / 2];
+
+			// springArg.rotation = [0, Math.PI / 2, -Math.PI / 2];
 			break;
 		case 1:
 			if (window.innerWidth < 900) {
 				springArg.position = [0, -0.30, 1.6];
 			} else {
-				springArg.position = [0, -0.40, 1.65];
+				springArg.position = [0, -0.4 ,1.7];
 			}
-			springArg.rotation = [0, Math.PI / 2, 0];
+
+
+			springArg.rotation = [0, Math.PI / 2 , 0];
 
 			break;
 		case 2:
@@ -53,6 +56,8 @@ export default function Mac(props) {
 			} else {
 				springArg.position = [0, -0.5, 0.75];
 			}
+
+
 			springArg.rotation = [0, -Math.PI / 2, 0];
 			break;
 
@@ -84,6 +89,7 @@ export default function Mac(props) {
 
 	return (
 		<animated.group
+			visible={macOrientationNumber != 0}
 			ref={myMesh}
 			rotation={rotation}
 			position={position}

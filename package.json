@@ -1,7 +1,7 @@
 {
-  "engines" : {
-    "npm" : "8.x",
-    "node" : "16.x"
+  "engines": {
+    "npm": "8.x",
+    "node": "16.x"
   },
   "name": "ardalanport",
   "version": "0.1.0",
@@ -18,12 +18,12 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "express": "^4.17.3",
-    "gsap": "^3.9.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
+    "react-spring": "^9.4.4",
     "three": "^0.138.3",
     "web-vitals": "^2.1.4"
   },

@@ -2,10 +2,19 @@ import logo from './logo.svg';
 import {Suspense, useState} from 'react';
 
 import './App.css';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import {Box, CircularProgress, createTheme, IconButton, responsiveFontSizes, ThemeProvider} from '@mui/material';
+import {
+	Box,
+	CircularProgress,
+	createTheme,
+	IconButton,
+	responsiveFontSizes,
+	ThemeProvider,
+	Typography,
+} from '@mui/material';
 import Info from './components/Info';
 import Bar from './components/Bar';
 import Mac from './components/Mac';
@@ -16,6 +25,8 @@ import {setToSkillsPage} from './redux/macOrientationSlice';
 import {decrement, increment} from './redux/projIndexSlice';
 import Colors from './colors';
 import {Route, Router, Routes} from 'react-router-dom';
+import Button from '@mui/material/Button';
+import ProjectInfo from './components/ProjectInfo';
 
 
 function App() {
@@ -78,50 +89,34 @@ function App() {
 			<Box
 				sx={{
 					display: 'flex',
-					height: '100vh',
+					flexDirection: 'column',
+					height: '100vh'
 				}}
 			>
-				{macOrientationNumber == 1 ? <IconButton id={'leftArrow'} sx={{
-					backgroundColor: Colors.darkBg,
-					color: Colors.lightBg,
-				}} onClick={() => {
-					dispatch(decrement())
-				}}
-				>
-					<KeyboardArrowLeftIcon/>
-				</IconButton> : null}
 
-				<ReactReduxContext.Consumer>
-					{({store}) => (
-						<Canvas
-							pixelRatio={3.0}
-							camera={{position: macOrientationNumber == 1 ? [0, 0, 2] : [0, 0, 2]}}
-						>
-							<Provider store={store}>
-								<color attach="background" args={['black']}/>
-								<Suspense fallback={null}>
-									<Mac/>
-								</Suspense>
-								<directionalLight color={0xfdfbd3} intensity={0.5} position={[-1, 0.5, 1]}/>
-								<directionalLight color={0xfdfbd3} intensity={0.5} position={[1, 0.5, 1]}/>
-							</Provider>
-						</Canvas>)}
-				</ReactReduxContext.Consumer>
+				<ProjectInfo macOrientation ={macOrientationNumber}/>
 
-				{macOrientationNumber == 1 ?
-					<IconButton id={'rightArrow'}
-					            sx={{
-						            backgroundColor: Colors.darkBg,
-						            color: Colors.lightBg,
-					            }}
-					            onClick={() => dispatch(increment())}
-					>
-						<KeyboardArrowRightIcon/>
-					</IconButton>
-					: null
-				}
-				{macOrientationNumber === 0 ? <Info/> : null}
+					<ReactReduxContext.Consumer>
+						{({store}) => (
+							<Canvas
+								pixelRatio={3.0}
+								camera={{position: macOrientationNumber == 1 ? [0, 0, 2] : [0, 0, 2]}}
+							>
+								<Provider store={store}>
+									<color attach="background" args={['black']}/>
+									<Suspense fallback={null}>
+										<Mac/>
+									</Suspense>
+									<directionalLight color={0xfdfbd3} intensity={0.5} position={[-1, 0.5, 1]}/>
+									<directionalLight color={0xfdfbd3} intensity={0.5} position={[1, 0.5, 1]}/>
+								</Provider>
+							</Canvas>)}
+					</ReactReduxContext.Consumer>
+
+				<Info macOrientation={macOrientationNumber}/>
 			</Box>
+
+
 		</ThemeProvider>
 
 	);
