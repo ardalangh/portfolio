@@ -8,6 +8,7 @@ import {animated, config, useSpring} from '@react-spring/three';
 import {useDispatch, useSelector} from 'react-redux';
 import SkillsThree from './SkillsThree';
 import {setToLoaded} from '../redux/loadedSlice';
+import {DRACOLoader} from 'three/examples/jsm/loaders/DRACOLoader';
 
 
 export default function Mac(props) {
@@ -17,7 +18,13 @@ export default function Mac(props) {
 	const projectIndex = useSelector((state) => state.projectIndex.value);
 	const dispatch = useDispatch();
 
-	const gltf = useLoader(GLTFLoader, './macbook/scene.glb');
+
+
+	const gltf = useLoader(GLTFLoader, './macbook/scene.glb', loader => {
+		const dracoLoader = new DRACOLoader();
+		dracoLoader.setDecoderPath('/draco-gltf/');
+		loader.setDRACOLoader(dracoLoader);
+	});
 
 	useEffect(() => {
 		if (gltf) {
