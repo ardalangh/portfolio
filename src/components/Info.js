@@ -53,7 +53,7 @@ function Info(props) {
 						</Typography>
 					</Box>
 				</Box>
-				<Typography variant="h6" sx={{marginTop: '5%', color: Colors.lightTextColor}}>
+				<Typography variant="h5" sx={{marginTop: '5%', color: Colors.lightTextColor}}>
 					I am a back-end engineer specialized in test-driven secure servers to power different services.
 					Currently I am focusing on building servers using
 					<a href={'https://www.rust-lang.org/'}> Rust </a>
