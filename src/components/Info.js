@@ -17,7 +17,7 @@ function Info(props) {
 					position: 'absolute',
 					top: '50%',
 					left: '50%',
-					width: '30vw',
+					width: '80vw',
 					height: '60vh',
 					transform: 'translate(-50%, -50%)',
 					justifyContent: 'center',

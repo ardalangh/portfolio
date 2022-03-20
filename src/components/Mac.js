@@ -38,17 +38,11 @@ export default function Mac(props) {
 
 	switch (macOrientationNumber) {
 		case 0:
-			if (window.innerWidth < 900) {
-				springArg.position = [0, 0.2, 1.0];
-			} else {
-				springArg.position = [0, 0, -10];
-			}
-
-			// springArg.rotation = [0, Math.PI / 2, -Math.PI / 2];
+			springArg.position = [0, 0, -10];
 			break;
 		case 1:
 			if (window.innerWidth < 900) {
-				springArg.position = [0, -0.30, 1.6];
+				springArg.position = [0, 0, 0.5];
 			} else {
 				springArg.position = [0, -0.4 ,1.7];
 			}
@@ -59,12 +53,10 @@ export default function Mac(props) {
 			break;
 		case 2:
 			if (window.innerWidth < 900) {
-				springArg.position = [0, -0.35, 0.55];
+				springArg.position = [0, -0.25, -0.2];
 			} else {
-				springArg.position = [0, -0.5, 0.75];
+				springArg.position = [0, -0.5, 0.7];
 			}
-
-
 			springArg.rotation = [0, -Math.PI / 2, 0];
 			break;
 

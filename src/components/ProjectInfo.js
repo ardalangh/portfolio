@@ -59,7 +59,7 @@ function ProjectInfo(props) {
 					color: '#929292',
 					backgroundColor: '#000000',
 					display: 'flex',
-					padding: '2%',
+					padding: '0% 2%',
 					justifyContent: 'center',
 					flexDirection: 'column',
 				}}
@@ -73,7 +73,7 @@ function ProjectInfo(props) {
 				<Box>
 					<Button
 						onClick={() => dispatch(increment())}
-						variant="outlined" startIcon={<NavigateBeforeIcon/>}> Next Project </Button>
+						variant="outlined" startIcon={<NavigateBeforeIcon/>}></Button>
 
 					<Button
 						onClick={() => window.location.href = project.repoLink}
@@ -81,7 +81,7 @@ function ProjectInfo(props) {
 					
 					<Button
 						onClick={() => dispatch(decrement())}
-						variant="outlined" startIcon={<NavigateNextIcon/>}> Previous Project </Button>
+						variant="outlined" startIcon={<NavigateNextIcon/>}> </Button>
 				</Box>
 			</Box>
 		</Fade>
