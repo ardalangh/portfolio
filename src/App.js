@@ -27,6 +27,7 @@ import Colors from './colors';
 import {Route, Router, Routes} from 'react-router-dom';
 import Button from '@mui/material/Button';
 import ProjectInfo from './components/ProjectInfo';
+import {InlineWidget, PopupWidget} from 'react-calendly';
 
 
 function App() {
@@ -74,27 +75,41 @@ function App() {
 
 	return (
 
-		<ThemeProvider theme={theme}>
-			<Bar/>
-			<Box
-				sx={{
-					textAlign: 'center',
-				}}
-			>
-				{!loaded ? <CircularProgress sx={{
-					backgroundColor: 'none',
-					color: 'white',
-				}}/> : null}
-			</Box>
-			<Box
-				sx={{
-					display: 'flex',
-					flexDirection: 'column',
-					height: '100vh'
-				}}
-			>
 
-				<ProjectInfo macOrientation ={macOrientationNumber}/>
+		<div>
+			<PopupWidget
+				url="https://calendly.com/ardyghoorchian/30min"
+				/*
+				 * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+				 * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+				 */
+				rootElement={document.getElementById("root")}
+				text="Schedule a meeting"
+				textColor="#ffffff"
+				color="#00a2ff"
+			/>
+			<ThemeProvider theme={theme}>
+
+				<Bar/>
+				<Box
+					sx={{
+						textAlign: 'center',
+					}}
+				>
+					{!loaded ? <CircularProgress sx={{
+						backgroundColor: 'none',
+						color: 'white',
+					}}/> : null}
+				</Box>
+				<Box
+					sx={{
+						display: 'flex',
+						flexDirection: 'column',
+						height: '100vh'
+					}}
+				>
+
+					<ProjectInfo macOrientation ={macOrientationNumber}/>
 
 					<ReactReduxContext.Consumer>
 						{({store}) => (
@@ -113,11 +128,13 @@ function App() {
 							</Canvas>)}
 					</ReactReduxContext.Consumer>
 
-				<Info macOrientation={macOrientationNumber}/>
-			</Box>
+					<Info macOrientation={macOrientationNumber}/>
+				</Box>
 
 
-		</ThemeProvider>
+			</ThemeProvider>
+		</div>
+
 
 	);
 }
