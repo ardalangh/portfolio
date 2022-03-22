@@ -77,6 +77,23 @@ const Bar = () => {
 						>
 							{'SKILLS'}
 						</Button>
+						<Button
+							variant="outlined"
+							key={'RESUME'}
+							sx={{
+								borderColor: Colors.lightBg,
+								my: 2,
+								color: Colors.lightBg,
+								marginRight: '0.5%',
+								display: 'block',
+								fontFamily: 'Inter,Nunito Sans,-apple-system,San Francisco,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Arial,sans-serif',
+							}}
+							download
+							href={"/ArdyGhoorchianResume.pdf"}
+							target="_blank"
+						>
+							{'RESUME'}
+						</Button>
 					</Box>
 				</Toolbar>
 			</Container>

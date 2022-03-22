@@ -1,33 +1,14 @@
-import logo from './logo.svg';
-import {Suspense, useState} from 'react';
+import {Suspense} from 'react';
 
 import './App.css';
-import GitHubIcon from '@mui/icons-material/GitHub';
-
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import {
-	Box,
-	CircularProgress,
-	createTheme,
-	IconButton,
-	responsiveFontSizes,
-	ThemeProvider,
-	Typography,
-} from '@mui/material';
+import {Box, CircularProgress, createTheme, responsiveFontSizes, ThemeProvider} from '@mui/material';
 import Info from './components/Info';
 import Bar from './components/Bar';
 import Mac from './components/Mac';
 import {Canvas} from '@react-three/fiber';
 import {Provider, ReactReduxContext, useDispatch, useSelector} from 'react-redux';
-import store from './redux/store';
-import {setToSkillsPage} from './redux/macOrientationSlice';
-import {decrement, increment} from './redux/projIndexSlice';
-import Colors from './colors';
-import {Route, Router, Routes} from 'react-router-dom';
-import Button from '@mui/material/Button';
 import ProjectInfo from './components/ProjectInfo';
-import {InlineWidget, PopupWidget} from 'react-calendly';
+import {PopupWidget} from 'react-calendly';
 
 
 function App() {
@@ -75,21 +56,15 @@ function App() {
 
 	return (
 
-
-		<div>
+		<>
 			<PopupWidget
 				url="https://calendly.com/ardyghoorchian/30min"
-				/*
-				 * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
-				 * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
-				 */
-				rootElement={document.getElementById("root")}
+				rootElement={document.getElementById('root')}
 				text="Schedule a meeting"
 				textColor="#ffffff"
 				color="#00a2ff"
 			/>
 			<ThemeProvider theme={theme}>
-
 				<Bar/>
 				<Box
 					sx={{
@@ -105,12 +80,10 @@ function App() {
 					sx={{
 						display: 'flex',
 						flexDirection: 'column',
-						height: '100vh'
+						height: '100vh',
 					}}
 				>
-
-					<ProjectInfo macOrientation ={macOrientationNumber}/>
-
+					<ProjectInfo macOrientation={macOrientationNumber}/>
 					<ReactReduxContext.Consumer>
 						{({store}) => (
 							<Canvas
@@ -127,14 +100,10 @@ function App() {
 								</Provider>
 							</Canvas>)}
 					</ReactReduxContext.Consumer>
-
 					<Info macOrientation={macOrientationNumber}/>
 				</Box>
-
-
 			</ThemeProvider>
-		</div>
-
+		</>
 
 	);
 }

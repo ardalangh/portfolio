@@ -9,6 +9,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import SkillsThree from './SkillsThree';
 import {setToLoaded} from '../redux/loadedSlice';
 import {DRACOLoader} from 'three/examples/jsm/loaders/DRACOLoader';
+import {useGLTF} from '@react-three/drei';
 
 
 export default function Mac(props) {
@@ -20,11 +21,15 @@ export default function Mac(props) {
 
 
 
-	const gltf = useLoader(GLTFLoader, './macbook/scene.glb', loader => {
+	const gltf = useLoader(GLTFLoader, './macbook/mac.glb',
+			loader => {
 		const dracoLoader = new DRACOLoader();
 		dracoLoader.setDecoderPath('/draco-gltf/');
 		loader.setDRACOLoader(dracoLoader);
 	});
+
+	// const { nodes, materials } = useGLTF('/shoe-draco.glb')
+
 
 	useEffect(() => {
 		if (gltf) {
