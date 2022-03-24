@@ -65,7 +65,7 @@ function ProjectInfo(props) {
 				}}
 			>
 				<Typography variant={'h3'}>{project.name}</Typography>
-				<Typography variant={'subtitle1'}>{project.detail}</Typography>
+				<Typography variant={'h6'}>{project.detail}</Typography>
 				<ul>
 					<li> - Written in {project.tech}</li>
 					<li> - Database used {project.db}</li>
